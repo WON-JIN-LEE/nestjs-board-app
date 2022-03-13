@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty } from 'class-validator';
+import { IsArray, IsEmail, IsNotEmpty } from 'class-validator';
 
 export class createBoardDto {
     @IsEmail()
@@ -13,7 +13,7 @@ export class createBoardDto {
     @IsNotEmpty()
     contents: string;
 
-    @IsNotEmpty()
+    @IsArray()
     stech: string[];
 
     @IsNotEmpty()
