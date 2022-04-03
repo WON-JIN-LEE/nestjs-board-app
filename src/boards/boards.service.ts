@@ -7,7 +7,7 @@ import { Model } from 'mongoose';
 export class BoardsService {
     private boards: Board[] = [];
     constructor(
-        @InjectModel('Board') private readonly boardModel: Model<Board>
+        @InjectModel('Board') private readonly boardModel: Model<Board>,
     ) {}
 
     async getAllBoards(): Promise<Board[]> {
